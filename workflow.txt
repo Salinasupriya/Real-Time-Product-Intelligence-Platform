@@ -1,0 +1,44 @@
+1. Get Product Data
+Collect product info (name, price, image, reviews) from an online API.
+Make requests fast using asyncio for multiple products at once.
+
+2. Handle Images
+Download the product image from the URL.
+Open it with PIL to check size and format.
+
+3. Analyze Reviews
+Check the reviews’ sentiment using TextBlob.
+Calculate average sentiment score for all reviews.
+
+4. Create Report
+Make a Word document (python-docx) for each product.
+Add title, price, reviews, sentiment, and image.
+Save file with a clean name.
+
+5. Process Everything
+For each product, do: 
+download image → analyze reviews → create report.
+
+Use asyncio.gather to do multiple products at the same time.
+
+6. Test Code
+Test review analysis gives correct score.
+Test report is created.
+
+Skip network tests if offline.
+
+7. Handle Errors
+If API fails or image missing, don’t crash — use fallback.
+
+
+[API/Data Source] 
+       ↓
+[Fetch Product JSON] 
+       ↓
+[Download Image] → [Fallback Dummy Image]
+       ↓
+[Analyze Reviews]
+       ↓
+[Generate DOCX Report] → [Save File]
+       ↓
+[Test & Validate]
